@@ -1,32 +1,40 @@
-document.getElementById("texto").innerHTML = "Nadi Duno"
-document.getElementById("nome").innerHTML = "Calculadora"
+document.getElementById("textCal").innerHTML = "Calculadora"
+document.getElementById("name").innerHTML = "<💜 /> @nadiduno"
+// document.getElementById("foto").setAttribute('src', "https://github.com/nadiduno.png")
 
-Adocument.getElementById("foto").setAttribute('src', "https://github.com/nadiduno.png")
-
-function somar() {
-    let numero1 = document.getElementById("numero1").value
-    let numero2 = document.getElementById("numero2").value
-    let soma = parseFloat(numero1) + parseFloat(numero2)
-    document.getElementById("resultado").innerHTML = soma
+function readNumbers() {
+    let number1 = document.getElementById('number1').value.replace(',', '.')
+    let number2 = document.getElementById('number2').value.replace(',', '.')
+}
+function sum() {
+    readNumbers()
+    let soma = parseFloat(number1) + parseFloat(number2)
+    document.getElementById("resulOpe").innerHTML = soma
 }
 function res() {
-    let numero1 = document.getElementById("numero1").value
-    let numero2 = document.getElementById("numero2").value
-    let sub = parseFloat(numero1) - parseFloat(numero2)
-    document.getElementById("resultado").innerHTML = sub
+    let number1 = document.getElementById("number1").value
+    let number2 = document.getElementById("number2").value
+    let sub = parseFloat(number1) - parseFloat(number2)
+    document.getElementById("resulOpe").innerHTML = sub
 }
 function mult() {
-    let numero1 = document.getElementById("numero1").value
-    let numero2 = document.getElementById("numero2").value
-    let mult = parseFloat(numero1) / parseFloat(numero2)
-    document.getElementById("resultado").innerHTML = mult
+    let number1 = document.getElementById("number1").value
+    let number2 = document.getElementById("number2").value
+    let mult = parseFloat(number1) * parseFloat(number2)
+    document.getElementById("resulOpe").innerHTML = mult
 }
 function div() {
-    let numero1 = document.getElementById("numero1").value
-    let numero2 = document.getElementById("numero2").value
-    let div = parseFloat(numero1) / parseFloat(numero2)
-    document.getElementById("resultado").innerHTML = div
+    let number1 = document.getElementById("number1").value
+    let number2 = document.getElementById("number2").value
+    let div = parseFloat(number1) / parseFloat(number2)
+    document.getElementById("resulOpe").innerHTML = div
 }
+function clear() {
+    document.getElementById("number1").value = ""
+    document.getElementById("number2").value = ""
+    document.getElementById("resulOpe").value = ""
+}
+
 
 
 
